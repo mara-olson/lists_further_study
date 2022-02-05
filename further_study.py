@@ -15,8 +15,10 @@ def custom_len(input_list):
         8
 
     """
-
-    return 0
+    count = 0
+    for item in input_list:
+        count += 1
+    return count
 
 
 # For the next four exercises, you'll need to be clever and think about ways
@@ -43,8 +45,10 @@ def custom_append(input_list, value):
         True
 
     """
-
-    pass
+  
+    print("VALUE", list(value))
+    input_list[:] = input_list + [value]
+    # return input_list.extend(list(value))
 
 
 def custom_extend(input_list, second_list):
@@ -63,11 +67,11 @@ def custom_extend(input_list, second_list):
 
     """
 
-    pass
+    input_list[:] = input_list + second_list
 
 
 def custom_insert(input_list, index, value):
-    """Insert value at index in the list.
+    """insert value at index in the list.
 
     Like input_list.insert(index, value), should insert (not replace) the value
     at the specified index of the input list and return nothing.
@@ -81,7 +85,8 @@ def custom_insert(input_list, index, value):
 
     """
 
-    pass
+    input_list[index:index] = [value]
+    # print('******', input_list)
 
 
 def custom_remove(input_list, value):
